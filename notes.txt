@@ -1,7 +1,8 @@
-A unit test is a small piece of code that tests a specific function or method in your project. It is used to ensure that the code is working as expected and to catch any errors or bugs that may occur.
+Let's create a package.json file to keep track of our dependencies and manage scripts. Let's install `vitest` by the following command:
+   `npm i -D vitest`
 
-Unit tests are done in isolation, meaning that they test specific parts of the code without depending on other parts of the code. 
+`vitest` requires node 20 or higher. 
 
-Unit tests only care the functionality of the code, not the logic behind it; input and output are the only things that matter.
+We can specify the kind of test runner we want to use in the `package.json` file. We can set the `test` script to `vitest`.
 
 video #1
