@@ -1,8 +1,14 @@
-Let's create a package.json file to keep track of our dependencies and manage scripts. Let's install `vitest` by the following command:
-   `npm i -D vitest`
+Let's create a function that compares two strings characters and returns the longest string.
 
-`vitest` requires node 20 or higher. 
+Let's create a test file in the tests directory. Test files should have `.test.js` extension. 
+   `${fileName}.test.js`
 
-We can specify the kind of test runner we want to use in the `package.json` file. We can set the `test` script to `vitest`.
+`Test Suite` is a group of tests that are related to each other. We use `describe` function to create a test suite, it takes two arguments: the name of what we are testing and a callback function that contains the tests. Inside the callback function we use `it` function to create a test, it takes two arguments: the name of the test and a callback function that contains the test code. The `it` function is called a "test case".
 
-video #1
+`expect` function is used to make assertions about the output of the function we are testing. It takes the output of the function as an argument and returns an object that has a `toBe` method that we can use to make assertions about the output. The `toBe` method takes the expected output as an argument and returns a boolean value indicating whether the output is equal to the expected output.
+
+Let's import `describe, it, expect` from `vitest`, and `longestString` function from `src/script.js`.
+
+We will follow the format we described above to create our test suite and test cases. We compare two strings and return the longest string. If we pass the longest string as an argument to the `expect` function, it will pass the test case. If we pass the shortest string as an argument to the `expect` function, it will fail the test case.
+
+video #2
