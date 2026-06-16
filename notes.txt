@@ -1,12 +1,7 @@
-Testing is an essential part of the software development life cycle. It helps to identify and fix bugs early in the development process, ensuring that the software is reliable and meets the requirements.
+A unit test is a small piece of code that tests a specific function or method in your project. It is used to ensure that the code is working as expected and to catch any errors or bugs that may occur.
 
-There are different types of testing;
-    1. End to End Testing - This type of testing involves testing the entire application from start to end, including all the features and functionalities. It helps to ensure that the application works as expected and meets the requirements.
+Unit tests are done in isolation, meaning that they test specific parts of the code without depending on other parts of the code. 
 
-    2. Integration Testing - This type of testing involves testing the integration of different components or modules of the application. It helps to identify any issues that may arise when different components are combined.
-
-    3. Unit Testing - This type of testing involves testing individual components or modules of the application in isolation. It helps to identify any issues that may arise when individual components are developed.
-
-In this course, we will be learning about unit testing, which involves testing individual components or modules of the application in isolation. We'll use `Vitest` as our testing framework 
+Unit tests only care the functionality of the code, not the logic behind it; input and output are the only things that matter.
 
 video #1
