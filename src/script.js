@@ -1,11 +1,11 @@
 export const longestString = (stringOne, stringTwo) =>{
 
-    if(stringTwo.length > stringOne.length){
+    if(stringTwo.trim().length > stringOne.trim().length){
 
-        return stringTwo
+        return stringTwo.trim()
 
     }
 
-    return stringOne
+    return stringOne.trim()
 
 }

@@ -11,4 +11,28 @@ describe('examples.longestString', ()  =>{
     
     })
 
+    it('returns the first string if they are the same length', () =>{
+
+        const longest = longestString('ditto', 'pidgy')
+
+        expect(longest).toBe('ditto')
+
+    })
+
+    it('returns empty string', () =>{
+    
+        expect(longestString('', 'Daisy')).toBe('Daisy')
+
+        expect(longestString('Brian', '')).toBe('Brian')
+
+        expect(longestString('', '')).toBe('')
+    
+    })
+
+    it('ignores leading and trailing spaces', () =>{
+    
+        expect(longestString('  Brian',  'Daisy')).toBe('Brian')
+    
+    })
+
 })
