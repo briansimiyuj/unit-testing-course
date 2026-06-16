@@ -1,0 +1,12 @@
+Testing is an essential part of the software development life cycle. It helps to identify and fix bugs early in the development process, ensuring that the software is reliable and meets the requirements.
+
+There are different types of testing;
+    1. End to End Testing - This type of testing involves testing the entire application from start to end, including all the features and functionalities. It helps to ensure that the application works as expected and meets the requirements.
+
+    2. Integration Testing - This type of testing involves testing the integration of different components or modules of the application. It helps to identify any issues that may arise when different components are combined.
+
+    3. Unit Testing - This type of testing involves testing individual components or modules of the application in isolation. It helps to identify any issues that may arise when individual components are developed.
+
+In this course, we will be learning about unit testing, which involves testing individual components or modules of the application in isolation. We'll use `Vitest` as our testing framework 
+
+video #1
