@@ -1,14 +1,13 @@
-Let's create a function that compares two strings characters and returns the longest string.
+`toBe` is used to check if two primitive values are equal eg. numbers, strings, booleans, null and undefined. It is very strict.
 
-Let's create a test file in the tests directory. Test files should have `.test.js` extension. 
-   `${fileName}.test.js`
+`toEqual` is used to check if two objects are equal. It checks the values of the objects and their properties. It is more lenient than `toBe` and can be used to check if two objects have the same properties and values. Eg. arrays, objects, etc.
 
-`Test Suite` is a group of tests that are related to each other. We use `describe` function to create a test suite, it takes two arguments: the name of what we are testing and a callback function that contains the tests. Inside the callback function we use `it` function to create a test, it takes two arguments: the name of the test and a callback function that contains the test code. The `it` function is called a "test case".
+`toContain` is used to check if an array contains a specific value. 
 
-`expect` function is used to make assertions about the output of the function we are testing. It takes the output of the function as an argument and returns an object that has a `toBe` method that we can use to make assertions about the output. The `toBe` method takes the expected output as an argument and returns a boolean value indicating whether the output is equal to the expected output.
+`not` is used to negate a test. It can be used with any test matcher to check if the test does not pass. Eg. `expect(value).not.toContain(expectedValue)`.
 
-Let's import `describe, it, expect` from `vitest`, and `longestString` function from `src/script.js`.
+`toThrow` is used to check if a function throws an error. Eg. `expect(() => { throw new Error('error message') }).toThrow('error message')`. The 'error message' must be the exact message that is thrown by the function.
 
-We will follow the format we described above to create our test suite and test cases. We compare two strings and return the longest string. If we pass the longest string as an argument to the `expect` function, it will pass the test case. If we pass the shortest string as an argument to the `expect` function, it will fail the test case.
+`toBeTypeOf` is used to check if a value is of a specific type. Eg. `expect(value).toBeTypeOf('string')`.
 
-video #2
+video #3
