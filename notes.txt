@@ -1,8 +1,7 @@
-Sometimes looking for errors at terminal can be messy. Vitest has a package that can help us visualize the errors in GUI. It's called `vitest/ui`. Let's install it.
-    `npm install -D @vitest/ui`
+Test Driven Development is a process that writing the test before the code. It is a way to ensure that the code is working as expected and that it is not breaking any existing functionality.
 
-Let's add another script to our `package.json` file for "test-ui" and assign it to `vitest --ui`. This will allow us to visualize the errors in a GUI. 
+Let's create a function that creates cards, it takes two parameters, the first one is the name of the card and the second one is the value of the card. 
 
-Once we run the script, a browser will open up and we can see the errors in a nice GUI. This can be helpful for debugging and seeing what went wrong in our tests.
+We now create a test for this function (refer to `createCards.test.js`). Once we have the test, we can start writing the function. (refer to `createCards.js`)
 
-video #6
+video #7
