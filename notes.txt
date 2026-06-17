@@ -1,13 +1,1 @@
-`toBe` is used to check if two primitive values are equal eg. numbers, strings, booleans, null and undefined. It is very strict.
-
-`toEqual` is used to check if two objects are equal. It checks the values of the objects and their properties. It is more lenient than `toBe` and can be used to check if two objects have the same properties and values. Eg. arrays, objects, etc.
-
-`toContain` is used to check if an array contains a specific value. 
-
-`not` is used to negate a test. It can be used with any test matcher to check if the test does not pass. Eg. `expect(value).not.toContain(expectedValue)`.
-
-`toThrow` is used to check if a function throws an error. Eg. `expect(() => { throw new Error('error message') }).toThrow('error message')`. The 'error message' must be the exact message that is thrown by the function.
-
-`toBeTypeOf` is used to check if a value is of a specific type. Eg. `expect(value).toBeTypeOf('string')`.
-
-video #3
+video #4

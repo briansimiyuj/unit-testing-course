@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { isPrime, longestString } from "../src/script"
+import { isPrime, longestString, shippingCost } from "../src/script"
 
 describe('examples.longestString', ()  =>{
 
@@ -107,6 +107,28 @@ describe('examples.isPrime', () =>{
 
         expect(() => isPrime({})).toThrowError
 
+    })
+    
+})
+
+describe('examples.shippingCost', () =>{
+
+    it('returns a number', () =>{
+
+        expect(shippingCost(1)).toBeTypeOf('number')
+
+    })
+
+    it('charges correct prices for interior weights', () =>{
+
+        expect(shippingCost(.5)).toBe(3.99)
+
+        expect(shippingCost(3)).toBe(5.99)
+
+        expect(shippingCost(10)).toBe(8.99)
+
+        expect(shippingCost(50)).toBe(14.99)
+    
     })
     
 })
