@@ -38,4 +38,29 @@ describe("createCards", () =>{
     
     })
 
+    it("creates cards objects with {  suit, value } properties", () =>{
+    
+        const cards = createCards({ suits, values }),
+              sampleCard = cards[0]
+
+        expect(sampleCard).toBeTypeOf("object")
+
+        expect(sampleCard).toHaveProperty("suit")
+
+        expect(sampleCard).toHaveProperty("value")
+    
+    })
+
+    it("creates combinations of suits and values", () =>{
+    
+        const cards = createCards({ suits, values }),
+              tenOfHearts = cards.find(card => card.suit === "hearts" && card.value === "10"),
+              aceOfSpades = cards.find(card => card.suit === "spades" && card.value === "ace")
+
+        expect(tenOfHearts).toBeDefined()
+
+        expect(aceOfSpades).toBeDefined()
+    
+    })
+
 })
