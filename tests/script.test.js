@@ -172,5 +172,15 @@ describe('examples.shippingCost', () =>{
         expect(() => shippingCost({})).toThrow(/(?=.*weight)(?=.*0)/i)
 
     })
+
+    it('throws an error when coupon is not a string', () =>{
+
+        expect(() => shippingCost(1, 1)).toThrow(/(?=.*coupon)(?=.*string)/i)
+
+        expect(() => shippingCost(1, true)).toThrow(/(?=.*coupon)(?=.*string)/i)
+
+        expect(() => shippingCost(1, {})).toThrow(/(?=.*coupon)(?=.*string)/i)
+         
+    })
     
 })
