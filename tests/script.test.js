@@ -119,27 +119,29 @@ describe('examples.shippingCost', () =>{
 
     })
 
-    it('charges correct prices for interior weights', () =>{
+    it.each([
 
-        expect(shippingCost(.5)).toBe(3.99)
+        { weight: .5, expected: 3.99 },
+        { weight: 3, expected: 5.99 },
+        { weight: 10, expected: 8.99 },
+        { weight: 50, expected: 14.99 }
 
-        expect(shippingCost(3)).toBe(5.99)
+    ])('charges $expected for $weights', ({  weight, expected }) =>{
 
-        expect(shippingCost(10)).toBe(8.99)
-
-        expect(shippingCost(50)).toBe(14.99)
+        expect(shippingCost(weight)).toBe(expected)
     
     })
 
-    it('charges correct prices at boundaries', () =>{
+    it.each([
 
-        expect(shippingCost(1)).toBe(3.99)
+        { weight: 1, expected: 3.99 },
+        { weight: 5, expected: 5.99 },
+        { weight: 20, expected: 8.99 },
+        { weight: 21, expected: 14.99 }
 
-        expect(shippingCost(5)).toBe(5.99)
+    ])('charges correct tiers at boundaries: $expected for $weight', ({ weight, expected }) =>{
 
-        expect(shippingCost(20)).toBe(8.99)
-
-        expect(shippingCost(21)).toBe(14.99)
+        expect(shippingCost(weight)).toBe(expected)
 
     })
 
