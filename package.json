@@ -4,12 +4,14 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "test-ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vitest/ui": "^4.1.9",
     "vitest": "^4.1.9"
   }
 }

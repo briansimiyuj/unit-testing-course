@@ -1,3 +1,8 @@
-We can use `each` method on the `it` to specify the limits of our test.
+Sometimes looking for errors at terminal can be messy. Vitest has a package that can help us visualize the errors in GUI. It's called `vitest/ui`. Let's install it.
+    `npm install -D @vitest/ui`
 
-video #4
+Let's add another script to our `package.json` file for "test-ui" and assign it to `vitest --ui`. This will allow us to visualize the errors in a GUI. 
+
+Once we run the script, a browser will open up and we can see the errors in a nice GUI. This can be helpful for debugging and seeing what went wrong in our tests.
+
+video #6
