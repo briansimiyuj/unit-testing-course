@@ -130,5 +130,17 @@ describe('examples.shippingCost', () =>{
         expect(shippingCost(50)).toBe(14.99)
     
     })
+
+    it('charges correct prices at boundaries', () =>{
+
+        expect(shippingCost(1)).toBe(3.99)
+
+        expect(shippingCost(5)).toBe(5.99)
+
+        expect(shippingCost(20)).toBe(8.99)
+
+        expect(shippingCost(21)).toBe(14.99)
+
+    })
     
 })

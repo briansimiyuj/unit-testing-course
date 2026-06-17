@@ -1,1 +1,3 @@
+Boundary tests are tests that check the limits of the system
+
 video #4
