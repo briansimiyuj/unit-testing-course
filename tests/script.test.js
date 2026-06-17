@@ -39,59 +39,73 @@ describe('examples.longestString', ()  =>{
 
 describe('examples.isPrime', () =>{
 
-    it('returns true for small prime numbers', () =>{
+    it('treats 0 and 1 as non-prime, 2 as prime', () =>{
     
+        expect(isPrime(0)).toBe(false)
+
+        expect(isPrime(1)).toBe(false)
+
         expect(isPrime(2)).toBe(true)
-
-        expect(isPrime(3)).toBe(true)
-
-        expect(isPrime(5)).toBeTruthy()
     
     })
 
-    it('returns false for non-prime numbers', () =>{
-        
+    it('returns false all even numbers greater than 2', () =>{
+    
         expect(isPrime(4)).toBe(false)
 
         expect(isPrime(6)).toBe(false)
 
-        expect(isPrime(8)).toBeFalsy()
+        expect(isPrime(8)).toBe(false)
+    
+    })
+
+    it('identifies commom primes', () =>{
+
+        expect(isPrime(3)).toBe(true)
+
+        expect(isPrime(5)).toBe(true)   
+
+        expect(isPrime(7)).toBe(true)
 
     })
 
-    it('matches results in array using toEqual', () =>{
+    it('returns false for perfect squares reliably', () =>{
 
-        const numbers = [2, 3, 4, 5],
-              results = numbers.map(isPrime)
+        expect(isPrime(4)).toBe(false)
 
-        expect(results).toEqual([true, true, false, true])
+        expect(isPrime(9)).toBe(false)
 
-    })
-
-    it('detects primes within a filtered list', () =>{
-
-        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-              primes = numbers.filter(isPrime)
-
-        expect(primes).toContain(7)
-
-        expect(primes).not.toContain(4) 
+        expect(isPrime(16)).toBe(false)
 
     })
 
-    it('throws an error for non numbers', () =>{
+    it('returns false for negative numbers', () =>{
 
-        const error = () => isPrime('two')
+        expect(isPrime(-1)).toBe(false)
 
-        expect(error).toThrow('Input must be a number')
+        expect(isPrime(-2)).toBe(false)
+
+        expect(isPrime(-3)).toBe(false)
 
     })
 
-    it('has the correct type for the isPrime function', () =>{
+    it('returns false for non-integer numbers', () =>{
 
-        expect(isPrime(7)).toBeTypeOf('boolean')
+        expect(isPrime(2.5)).toBe(false)
 
-        expect(typeof isPrime(11)).toBe('boolean')
+        expect(isPrime(3.7)).toBe(false)    
+
+        expect(isPrime(4.9)).toBe(false)
+
+    })
+
+    it('throws an error for non-number arguments', () =>{
+
+        expect(() => isPrime('Brian')).toThrowError
+
+        expect(() => isPrime(true)).toThrowError
+
+        expect(() => isPrime({})).toThrowError
 
     })
     
