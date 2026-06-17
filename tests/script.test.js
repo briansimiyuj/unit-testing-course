@@ -160,5 +160,17 @@ describe('examples.shippingCost', () =>{
         expect(shippingCost(21)).toBe(14.99)
 
     })
+
+    it('throws an error for invalid weights', () =>{
+
+        expect(() => shippingCost(-1)).toThrow(/(?=.*weight)(?=.*0)/i)
+
+        expect(() => shippingCost('Brian')).toThrow(/(?=.*weight)(?=.*0)/i)
+
+        expect(() => shippingCost(true)).toThrow(/(?=.*weight)(?=.*0)/i)
+
+        expect(() => shippingCost({})).toThrow(/(?=.*weight)(?=.*0)/i)
+
+    })
     
 })

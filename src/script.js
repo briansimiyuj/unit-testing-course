@@ -30,7 +30,7 @@ export const isPrime = (num) =>{
 
 export const shippingCost = (weight, coupon = '') =>{
     
-    if(typeof weight !== 'number') throw new Error('Weight must be a number')
+    if(typeof weight !== 'number') throw new Error('Weight must be a number and greater than 0')
 
     if(typeof coupon !== 'string') throw new Error('Coupon must be a string')
 
