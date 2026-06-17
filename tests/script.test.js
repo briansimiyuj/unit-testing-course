@@ -148,7 +148,17 @@ describe('examples.shippingCost', () =>{
         expect(shippingCost(1, 'FREESHIPPING')).toBe(0)
 
         expect(shippingCost(21, 'FREESHIPPING')).toBe(0)
-        
+
+    })
+
+    it('ignored invalid coupons', () =>{
+
+        expect(shippingCost(1, 'freeshipping')).toBe(3.99)
+
+        expect(shippingCost(21, 'nothing')).toBe(14.99)
+
+        expect(shippingCost(21)).toBe(14.99)
+
     })
     
 })
