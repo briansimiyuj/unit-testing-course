@@ -63,4 +63,12 @@ describe("createCards", () =>{
     
     })
 
+    it("throws an error for duplicate suits or values", () =>{
+    
+        expect(() => createCards({ suits: ['hearts', 'diamonds', 'clubs', 'clubs'], values })).toThrow(/duplicate/)
+
+        expect(() => createCards({ suits, values: ['ace', '2', '3', '4', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'king'] })).toThrow(/duplicate/)
+    
+    })
+
 })

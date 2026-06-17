@@ -12,6 +12,18 @@ export const createCards = ({ suits, values }) =>{
 
     }
 
+    if(new Set(suits).size !== suits.length){
+
+        throw new Error('suits contains duplicate values')
+
+    }
+
+    if(new Set(values).size !== values.length){
+
+        throw new Error('values contains duplicate values')
+        
+    }
+
     let cards = []
 
     for (let i = 0; i < suits.length; i++){
