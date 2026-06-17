@@ -142,5 +142,13 @@ describe('examples.shippingCost', () =>{
         expect(shippingCost(21)).toBe(14.99)
 
     })
+
+    it('Applies FREESHIPPING coupon exactly', () =>{
+
+        expect(shippingCost(1, 'FREESHIPPING')).toBe(0)
+
+        expect(shippingCost(21, 'FREESHIPPING')).toBe(0)
+        
+    })
     
 })
