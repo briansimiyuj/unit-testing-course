@@ -1,7 +1,5 @@
-Test Driven Development is a process that writing the test before the code. It is a way to ensure that the code is working as expected and that it is not breaking any existing functionality.
+Let's now test asynchronous function, we create `loadDeck` function that will return a promise that will resolve to a deck of cards.
 
-Let's create a function that creates cards, it takes two parameters, the first one is the name of the card and the second one is the value of the card. 
+To test a promise, we use the `toBeInstanceOf(Promise)` matcher. To test the resolved value of a promise, we use the `resolves.toBeDefined()` matcher.
 
-We now create a test for this function (refer to `createCards.test.js`). Once we have the test, we can start writing the function. (refer to `createCards.js`)
-
-video #7
+video #8
