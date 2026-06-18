@@ -17,15 +17,16 @@ describe("loadDeck", () =>{
     
         const result = await loadDeck()
 
-        expect(typeof result).toBe("object")
+        expect(result).toEqual(
 
-        expect(result).toHaveProperty("suits")
+            expect.objectContaining({
 
-        expect(result).toHaveProperty("values")
+                suits: expect.any(Array),
+                values: expect.any(Array)
 
-        expect(Array.isArray(result.suits)).toBe(true)
+            })
 
-        expect(Array.isArray(result.values)).toBe(true)
+        )
 
         expect(result.suits).toHaveLength(4)
 

@@ -1,5 +1,3 @@
-Let's now test asynchronous function, we create `loadDeck` function that will return a promise that will resolve to a deck of cards.
+Asymmetric matcher is a way to match expected values with actual values
 
-To test a promise, we use the `toBeInstanceOf(Promise)` matcher. To test the resolved value of a promise, we use the `resolves.toBeDefined()` matcher.
-
-video #8
+video #9
